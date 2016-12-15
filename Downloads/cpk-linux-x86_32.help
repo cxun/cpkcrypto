@@ -1,0 +1,43 @@
+Usage: cpk command [options] ...
+
+Commands:
+  -help                       print system information
+  -setup domainid             generate masterkey and system parameters
+  -export-param               export public-parameters
+  -import-param               import public-parameters
+  -print-param                print public-parameters
+  -genkey identity            generate a key with user's identifier
+  -print-key                  print key in big integer
+  -set-identity identity      set identity
+  -identity                   print identity
+  -import-sign-key            import signing key
+  -import-decrypt-key         import decryption key
+  -change-sign-password       change signing password
+  -change-decrypt-password    change decryption password
+  -sign                       generate standalone signature
+  -verify signature           verify standalone signature
+  -encrypt                    encrypt file to multiple recipients
+  -decrypt                    decrypt file
+
+Options:
+  -signer identity            signer
+  -to identity                recipient's identity, this option can be use multiple times
+  -format-preserve            file format preserve cryptography operation
+  -text                       text encode or decode
+  -in file		    input file
+  -out file                   output file
+  -pass password              password
+  -new-pass password          new password
+  -verbose                    verbose
+
+Examples:
+  cpk -sign <document.txt >document.txt.sig
+  cpk -verify $(cat document.txt.sig) <document.txt
+
+Files:
+  ~/.cpk/master_secret        system master secret
+  ~/.cpk/public_params        system public parameters
+  ~/.cpk/decrypt_key          decryption private key
+  ~/.cpk/sign_key             signing private key
+  ~/.cpk/identity             user's identifier
+

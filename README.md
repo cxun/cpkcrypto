@@ -46,7 +46,7 @@ executable binary to the default path.
 To initialize this cryptographic system, at first you need to import the system
 public parameters, setup your own identity and request the corresponding private
 key. You can download the default public
-parameters [public\_params.der](http://cpkcrypto.googlecode.com/files/public_params.der),
+parameters [public\_params.der](https://github.com/cxun/cpkcrypto/raw/master/Downloads/public_params.der),
 and then import it with the following command: `$ cpk -import-param -in
 public_param.der `The next step is to set your identity and import your private
 keys. The identity can be any type of string, while currently we only generate
@@ -54,7 +54,7 @@ private keys for internet users with email address as identity. You can write a
 letter to the owner of this project (guanzhi1980) to request the corresponding
 private key. The private key will be mail to you in 2 days. We also provide two
 example private keys
-( [alice\@cpksecurity.com](http://code.google.com/p/cpkcrypto/downloads/detail?name=alice.pem), [bob\@cpksecurity.com](http://code.google.com/p/cpkcrypto/downloads/detail?name=bob.pem))
+( [alice\@cpksecurity.com](https://github.com/cxun/cpkcrypto/raw/master/Downloads/alice.pem), [bob\@cpksecurity.com](https://github.com/cxun/cpkcrypto/raw/master/Downloads/bob.pem))
 for testing. `$ cpk -set-identity alice@cpksecurity.com $ cpk -import-sign-key
 -in alice.pem $ cpk -import-decrypt-key -in alice.pem `The default password is
 "12345678". You can change the password after the import with command: `$cpk
@@ -75,4 +75,4 @@ bob\@cpksecurity.com -out document.txt.cpk
 CPK Browser Plugin (new!)
 -------------------------
 
-![](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cpkcrypto/Screenshot-Web%20Browser%20Crypto%20Plugin%20-%20Mozilla%20Firefox.png)
+![](https://github.com/cxun/cpkcrypto/raw/master/Downloads/Screenshot-Web%20Browser%20Crypto%20Plugin%20-%20Mozilla%20Firefox.png)
