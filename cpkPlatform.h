@@ -10,7 +10,7 @@ extern "C" {
 
 #include <windows.h>
 
-typedef char		boolean_t;
+typedef char		int;
 typedef unsigned int	uint32_t;
 typedef unsigned long	ulong_t;
 
@@ -25,6 +25,13 @@ typedef unsigned long	ulong_t;
 #include <unistd.h>
 #include <strings.h>
 #include <sys/types.h>
+#include "stdint.h"
+
+typedef unsigned long	ulong_t;
+typedef enum { 
+    B_FALSE, 
+    B_TRUE 
+} boolean_t;
 
 #define PATH_SEP	"/"
 

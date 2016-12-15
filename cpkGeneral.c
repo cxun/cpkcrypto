@@ -15,7 +15,7 @@
 
 //#pragma fini(cpktoken_fini)
 
-static struct CK_FUNCTION_LIST functionList = {
+static CK_FUNCTION_LIST functionList = {
 	{ 2, 20 },	/* version */
 	C_Initialize,
 	C_Finalize,
@@ -87,7 +87,7 @@ static struct CK_FUNCTION_LIST functionList = {
 	C_WaitForSlotEvent
 };
 
-boolean_t cpktoken_initialized = B_FALSE;
+int cpktoken_initialized = B_FALSE;
 
 static pid_t cpktoken_pid = 0;
 
@@ -105,7 +105,7 @@ ses_to_be_freed_list_t ses_delay_freed;
 /* protects cpktoken_initialized and access to C_Initialize/C_Finalize */
 pthread_mutex_t cpk_giant_mutex = PTHREAD_MUTEX_INITIALIZER;
 
-static CK_RV finalize_common(boolean_t force, CK_VOID_PTR pReserved);
+static CK_RV finalize_common(int force, CK_VOID_PTR pReserved);
 static void cpktoken_fini();
 
 CK_RV
@@ -206,7 +206,7 @@ C_Finalize(CK_VOID_PTR pReserved)
  * must be held before calling this function.
  */
 static CK_RV
-finalize_common(boolean_t force, CK_VOID_PTR pReserved) {
+finalize_common(int force, CK_VOID_PTR pReserved) {
 
 	CK_RV rv = CKR_OK;
 #if 1

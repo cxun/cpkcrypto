@@ -14,7 +14,7 @@ C_SignInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMechanism,
 	CK_RV		rv;
 	cpk_session_t	*session_p;
 	cpk_object_t	*key_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -76,7 +76,7 @@ C_Sign(CK_SESSION_HANDLE hSession, CK_BYTE_PTR pData, CK_ULONG ulDataLen,
 
 	CK_RV		rv;
 	cpk_session_t	*session_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -147,7 +147,7 @@ C_SignUpdate(CK_SESSION_HANDLE hSession, CK_BYTE_PTR pPart,
 
 	CK_RV		rv;
 	cpk_session_t	*session_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -207,7 +207,7 @@ C_SignFinal(CK_SESSION_HANDLE hSession, CK_BYTE_PTR pSignature,
 
 	CK_RV		rv;
 	cpk_session_t	*session_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);

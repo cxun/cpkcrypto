@@ -15,7 +15,7 @@ extern "C" {
 
 #include <pthread.h>
 #include <security/cryptoki.h>
-#include <security/pkcs11t.h>
+#include <security/pkcs11.h>
 #include "cpkPlatform.h"
 
 
@@ -23,7 +23,7 @@ extern "C" {
 /*
  * The following global variables are defined in cpkGeneral.c
  */
-extern boolean_t cpktoken_initialized;
+extern int cpktoken_initialized;
 extern pthread_mutex_t cpk_giant_mutex;
 extern struct slot cpk_slot;
 extern struct obj_to_be_freed_list obj_delay_freed;

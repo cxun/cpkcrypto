@@ -305,7 +305,7 @@ CK_RV
 cpk_remove_object_from_session(cpk_object_t *objp, cpk_session_t *sp)
 {
 	cpk_object_t *tmp_objp;
-	boolean_t found = B_FALSE;
+	int found = B_FALSE;
 
 	/*
 	 * Remove the object from the session's object list.
@@ -470,7 +470,7 @@ cpk_delete_object_cleanup(cpk_object_t *objp)
  * that lock before returning to caller.
  */
 void
-cpk_delete_object(cpk_session_t *sp, cpk_object_t *objp, boolean_t lock_held)
+cpk_delete_object(cpk_session_t *sp, cpk_object_t *objp, int lock_held)
 {
 
 	/*

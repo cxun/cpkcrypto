@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkcrypto/ecies.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkGeneral.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkObject.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkGlobal.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkcrypto/ecies_asn1.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/security/pkcs11.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkcrypto/cpk.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/main.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkPlatform.h</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkAttributeUtil.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkcrypto/ecies_lib.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkSessionUtil.c</file>
+            <file>file:/home/admin/Documents/work/cpkcrypto/cpkSession.h</file>
+        </group>
+    </open-files>
 </project-private>

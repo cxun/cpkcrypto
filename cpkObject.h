@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #include <pthread.h>
-#include <security/pkcs11t.h>
+#include <security/pkcs11.h>
 #include "pkcs11cpk.h"
 #include "cpkSession.h"
 #include "cpkcrypto/cpk.h"
@@ -115,7 +115,7 @@ CK_RV cpk_copy_object(cpk_object_t *old_object, cpk_object_t **new_object,
 CK_RV cpk_remove_object_from_session(cpk_object_t *objp, cpk_session_t *sp);
 
 void object_delay_free(cpk_object_t *objp);
-void cpk_delete_object(cpk_session_t *sp, cpk_object_t *objp, boolean_t lock_held);
+void cpk_delete_object(cpk_session_t *sp, cpk_object_t *objp, int lock_held);
 void cpk_delete_all_objects_in_session(cpk_session_t *sp);
 
 /* cpkAttributeUtil.c */

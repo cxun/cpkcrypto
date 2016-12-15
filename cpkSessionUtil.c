@@ -20,7 +20,7 @@ CK_ULONG cpk_session_rw_cnt = 0;	/* the number of opened R/W sessions */
  * caller.
  */
 CK_RV
-cpk_delete_all_sessions(boolean_t force)
+cpk_delete_all_sessions(int force)
 {
 
 	CK_RV rv = CKR_OK;
@@ -191,7 +191,7 @@ session_delay_free(cpk_session_t *sp)
  */
 CK_RV
 cpk_delete_session(cpk_session_t *session_p,
-    boolean_t force, boolean_t lock_held)
+    int force, int lock_held)
 {
 
 	/*

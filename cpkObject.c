@@ -15,7 +15,7 @@ C_CreateObject(CK_SESSION_HANDLE hSession,
 {
 	CK_RV rv;
 	cpk_session_t *session_p;
-	boolean_t lock_held = B_FALSE;
+	int lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -57,7 +57,7 @@ C_DestroyObject(CK_SESSION_HANDLE hSession, CK_OBJECT_HANDLE hObject)
 	CK_RV rv;
 	cpk_object_t *object_p;
 	cpk_session_t *session_p = (cpk_session_t *)(hSession);
-	boolean_t lock_held = B_FALSE;
+	int lock_held = B_FALSE;
 	CK_SESSION_HANDLE creating_session;
 
 
@@ -127,7 +127,7 @@ C_GetAttributeValue(CK_SESSION_HANDLE hSession, CK_OBJECT_HANDLE hObject,
 	CK_RV rv = CKR_OK, rv1 = CKR_OK;
 	cpk_object_t *object_p;
 	cpk_session_t *session_p;
-	boolean_t lock_held = B_FALSE;
+	int lock_held = B_FALSE;
 	ulong_t i;
 
 	if (!cpktoken_initialized)

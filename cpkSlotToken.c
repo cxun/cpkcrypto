@@ -129,7 +129,7 @@ C_GetTokenInfo(CK_SLOT_ID slotID, CK_TOKEN_INFO_PTR pInfo)
 {
 
 	ulong_t	token_flag = 0;
-	boolean_t pin_initialized = B_FALSE;
+	int pin_initialized = B_FALSE;
 	char	*ks_cryptpin = NULL;
 	CK_RV rv = CKR_OK;
 

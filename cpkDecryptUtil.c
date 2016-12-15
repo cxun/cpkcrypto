@@ -33,7 +33,7 @@ cpk_decrypt_init(cpk_session_t *session_p, CK_MECHANISM_PTR pMechanism,
 CK_RV
 cpk_decrypt_common(cpk_session_t *session_p, CK_BYTE_PTR pEncrypted,
     CK_ULONG ulEncryptedLen, CK_BYTE_PTR pData,
-    CK_ULONG_PTR pulDataLen, boolean_t Update)
+    CK_ULONG_PTR pulDataLen, int Update)
 {
 
 	CK_MECHANISM_TYPE mechanism = session_p->decrypt.mech.mechanism;

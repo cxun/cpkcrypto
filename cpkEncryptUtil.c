@@ -54,12 +54,12 @@ cpk_encrypt(cpk_session_t *session_p, CK_BYTE_PTR pData,
 
 
 void
-cpk_crypt_cleanup(cpk_session_t *session_p, boolean_t encrypt,
-	boolean_t lock_held)
+cpk_crypt_cleanup(cpk_session_t *session_p, int encrypt,
+	int lock_held)
 {
 
 	crypto_active_op_t *active_op;
-	boolean_t lock_true = B_TRUE;
+	int lock_true = B_TRUE;
 
 	if (!lock_held)
 		(void) pthread_mutex_lock(&session_p->session_mutex);

@@ -31,7 +31,7 @@ void cpk_cleanup_public_key_object(cpk_object_t *object_p);
 void cpk_cleanup_private_key_object(cpk_object_t *object_p);
 
 CK_RV cpk_set_public_key_attribute(cpk_object_t *object_p,
-	CK_ATTRIBUTE_PTR template, boolean_t copy);
+	CK_ATTRIBUTE_PTR template, int copy);
 
 CK_RV si_sign_init(cpk_session_t *session_p, CK_MECHANISM_PTR pMechanism,
     cpk_object_t *key_p);
@@ -59,7 +59,7 @@ CK_RV si_verify(cpk_session_t *session_p, CK_BYTE_PTR pData,
 CK_RV si_verify_final(cpk_session_t *session_p, CK_BYTE_PTR pSignature,
     CK_ULONG ulSignatureLen);
 
-void si_sign_verify_cleanup(cpk_session_t *session_p, boolean_t sign);
+void si_sign_verify_cleanup(cpk_session_t *session_p, int sign);
 
 CK_RV ri_encrypt_init(cpk_session_t *session_p, CK_MECHANISM_PTR pMechanism,
 	cpk_object_t *key_p);

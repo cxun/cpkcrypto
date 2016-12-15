@@ -321,7 +321,7 @@ cpk_cleanup_private_key_object(cpk_object_t *object_p)
 
 CK_RV
 cpk_set_public_key_attribute(cpk_object_t *object_p,
-	CK_ATTRIBUTE_PTR template, boolean_t copy)
+	CK_ATTRIBUTE_PTR template, int copy)
 {
 	unsigned char *id = NULL;
 	unsigned int idlen = 0;
@@ -653,7 +653,7 @@ err:
  * session_p->verify.context	CPK_KEY_INFO
  */
 void
-si_sign_verify_cleanup(cpk_session_t *session_p, boolean_t sign)
+si_sign_verify_cleanup(cpk_session_t *session_p, int sign)
 {
 
 	crypto_active_op_t *active_op;

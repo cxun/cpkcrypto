@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #include <pthread.h>
-#include <security/pkcs11t.h>
+#include <security/pkcs11.h>
 #include "cpkPlatform.h"
 
 
@@ -113,12 +113,12 @@ extern CK_ULONG cpk_session_rw_cnt;	/* the number of opened R/W sessions */
  * Function Prototypes.
  */
 CK_RV handle2session(CK_SESSION_HANDLE hSession, cpk_session_t **session_p);
-CK_RV cpk_delete_all_sessions(boolean_t force);
+CK_RV cpk_delete_all_sessions(int force);
 void cpk_delete_all_objects_in_session(cpk_session_t *sp);
 CK_RV cpk_add_session(CK_FLAGS flags, CK_VOID_PTR pApplication,
     CK_NOTIFY notify, CK_ULONG *phSession);
 CK_RV cpk_delete_session(cpk_session_t *sp,
-    boolean_t force, boolean_t lock_held);
+    int force, int lock_held);
 
 
 

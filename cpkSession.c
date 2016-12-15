@@ -37,7 +37,7 @@ C_CloseSession(CK_SESSION_HANDLE hSession)
 
 	CK_RV rv;
 	cpk_session_t *session_p;
-	boolean_t lock_held = B_TRUE;
+	int lock_held = B_TRUE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -101,7 +101,7 @@ C_GetSessionInfo(CK_SESSION_HANDLE hSession, CK_SESSION_INFO_PTR pInfo)
 
 	cpk_session_t *session_p;
 	CK_RV rv;
-	boolean_t lock_held = B_TRUE;
+	int lock_held = B_TRUE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);

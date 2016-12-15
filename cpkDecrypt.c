@@ -15,7 +15,7 @@ C_DecryptInit(CK_SESSION_HANDLE hSession, CK_MECHANISM_PTR pMechanism,
 
 	cpk_session_t	*session_p;
 	cpk_object_t	*key_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
@@ -76,7 +76,7 @@ C_Decrypt(CK_SESSION_HANDLE hSession, CK_BYTE_PTR pEncryptedData,
 
 	CK_RV		rv;
 	cpk_session_t	*session_p;
-	boolean_t	lock_held = B_FALSE;
+	int	lock_held = B_FALSE;
 
 	if (!cpktoken_initialized)
 		return (CKR_CRYPTOKI_NOT_INITIALIZED);
