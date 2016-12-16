@@ -31,6 +31,7 @@ import javax.jdo.Query;
 import javax.security.auth.x500.X500Principal;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -53,6 +54,7 @@ import com.dyuproject.openid.ext.AxSchemaExtension;
  * start authentication with OpenID
  * @author Administrator
  */
+@WebServlet("/keygen")
 public class PrikeyGen extends HttpServlet {
 	private static final long serialVersionUID = 4906098085632188831L;
 	private static Logger logger = Logger.getLogger(PrikeyGen.class);

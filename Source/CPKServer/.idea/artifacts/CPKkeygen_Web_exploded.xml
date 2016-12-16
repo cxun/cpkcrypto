@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CPKkeygen:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CPKkeygen_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CPKkeygen/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="CPKjava.jar" module-name="CPKkeygen" />
+          <element id="library" level="module" name="bc1_45.jar" module-name="CPKkeygen" />
+          <element id="file-copy" path="$PROJECT_DIR$/war/WEB-INF/lib/jdo-api-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/war/WEB-INF/lib/log4j-1.2-api-2.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/war/WEB-INF/lib/dyuproject-openid-oauth-1.1.7-jarjar.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/war/WEB-INF/lib/appengine-api-1.0-sdk-1.3.2.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

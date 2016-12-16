@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<filter>
+	    <filter-name>openid-filter</filter-name>
+		<filter-class>com.dyuproject.openid.OpenIdServletFilter</filter-class>
+		<init-param>
+			<param-name>forwardUri</param-name>
+			<param-value>/WEB-INF/views/jsp/login.jsp</param-value> <!-- login page when user is not authenticated-->
+		</init-param>
+  	</filter> 
+
+	<!-- the activities concerning about keygen must be authenticated first -->
+	<filter-mapping>
+		<filter-name>openid-filter</filter-name>
+		<url-pattern>/keygen/*</url-pattern>
+	</filter-mapping>
+	
+	<context-param>
+	 	<param-name>AppURI</param-name>
+        <param-value>cpk-keygen.appspot.com</param-value>        
+	</context-param>
+	<context-param>
+		<param-name>TimeZone</param-name>
+        <param-value>GMT+8</param-value>
+	</context-param>
+	<context-param>
+		<param-name>EcCurveName</param-name>
+		<param-value>prime192v1</param-value>
+	</context-param>
+
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!--  every link should be accessed with HTTPS -->
+<!--	<security-constraint>-->
+<!--        <web-resource-collection>-->
+<!--            <url-pattern>/*</url-pattern>-->
+<!--            <url-pattern>/**</url-pattern>-->
+<!--        </web-resource-collection>-->
+<!--        <user-data-constraint>-->
+<!--            <transport-guarantee>CONFIDENTIAL</transport-guarantee>-->
+<!--        </user-data-constraint>-->
+<!--    </security-constraint>-->
+</web-app>
